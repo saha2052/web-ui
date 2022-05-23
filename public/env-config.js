@@ -1,0 +1,11 @@
+window._env_ = { 
+  REACT_APP_API_PROJECT_METHOD: "http", 
+  REACT_APP_API_PROJECT_HOST: "localhost", 
+  REACT_APP_API_PROJECT_PORT: "8010", 
+  REACT_APP_API_DATASOURCE_METHOD: "http", 
+  REACT_APP_API_DATASOURCE_HOST: "localhost", 
+  REACT_APP_API_DATASOURCE_PORT: "8180", 
+  REACT_APP_TENANT: "https://login.microsoftonline.com/105b2061-b669-4b31-92ac-24d304d195dc/", 
+  REACT_APP_APPLICATIONID: "9ca4aa55-14e2-4ebb-926c-d2f728628b22", 
+  REACT_APP_REDIRECTURI: "http://localhost:3000", 
+} 
