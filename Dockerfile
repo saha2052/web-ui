@@ -12,12 +12,13 @@ RUN apt-get -q update && apt-get clean && \
     apt-get install -y \
     supervisor \
     nginx && \
+    mkdir -p /var/log/supervisor && mkdir -p /etc/supervisor/conf.d \
     rm -rf /var/lib/apt/lists/*
 
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 COPY nginx-app.conf /etc/nginx/sites-available/default
-COPY supervisor-app.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisor-app.conf /etc/supervisor.conf
 # RUN supervisorctl reread
 # RUN supervisorctl update
 
@@ -28,5 +29,5 @@ WORKDIR /app
 
 EXPOSE 80 443 3000
 
-CMD ["supervisord", "-n"]
+CMD ["supervisord", "-c", "/etc/supervisor.conf"]
 #CMD ["npm", "start"]
