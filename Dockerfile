@@ -12,7 +12,7 @@ RUN apt-get -q update && apt-get clean && \
     apt-get install -y \
     supervisor \
     nginx && \
-    mkdir -p /var/log/supervisor && mkdir -p /etc/supervisor/conf.d \
+    mkdir -p /var/log/supervisor && mkdir -p /etc/supervisor/conf.d && \
     rm -rf /var/lib/apt/lists/*
 
 
